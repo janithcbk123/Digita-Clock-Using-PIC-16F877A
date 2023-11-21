@@ -1,0 +1,170 @@
+MCL   T   "  ¢  &  #a       P16F877A     Digita-Clock.c Ğ\V    4                                 Digita-Clock.c  B   ÿ       ÿÿÿÿşÿÿÿLCD_RS LCD_RS                          B   ÿ       ÿÿÿÿıÿÿÿLCD_EN LCD_EN                          B   ÿ       ÿÿÿÿüÿÿÿLCD_D4 LCD_D4                          B   ÿ       ÿÿÿÿûÿÿÿLCD_D5 LCD_D5                          B   ÿ       ÿÿÿÿúÿÿÿLCD_D6 LCD_D6                          B   ÿ       ÿÿÿÿùÿÿÿLCD_D7 LCD_D7                          B   ÿ       ÿÿÿÿøÿÿÿLCD_RS_Direction LCD_RS_Direction                          B   ÿ       ÿÿÿÿ÷ÿÿÿLCD_EN_Direction LCD_EN_Direction                          B   ÿ       ÿÿÿÿöÿÿÿLCD_D4_Direction LCD_D4_Direction                          B   ÿ       ÿÿÿÿõÿÿÿLCD_D5_Direction LCD_D5_Direction                          B   ÿ       ÿÿÿÿôÿÿÿLCD_D6_Direction LCD_D6_Direction                          B   ÿ       ÿÿÿÿóÿÿÿLCD_D7_Direction LCD_D7_Direction                          B    ÿ       ÿÿÿÿÿÿÿÿsecond _second B    ÿ       ÿÿÿÿÿÿÿÿminute _minute B    ÿ       ÿÿÿÿÿÿÿÿhour _hour B    ÿ       ÿÿÿÿÿÿÿÿhr _hr B    ÿ       ÿÿÿÿÿÿÿÿday _day B    ÿ       ÿÿÿÿÿÿÿÿdday _dday B    ÿ       ÿÿÿÿÿÿÿÿmonth _month B    ÿ       ÿÿÿÿÿÿÿÿyear _year B    ÿ       ÿÿÿÿÿÿÿÿap _ap B    ÿ       ÿÿÿÿÿÿÿÿapp _app B    ÿ        ÿÿÿÿÿÿÿÿset_timer _set_timer B    ÿ   !    ÿÿÿÿÿÿÿÿmode _mode B    ÿ   "    ÿÿÿÿÿÿÿÿset_count _set_count B    ÿ   #     ÿÿÿÿÿÿÿÿold_state1 _old_state1 B    	ÿ   %    ÿÿÿÿÿÿÿÿsecondC _secondC     
+                         ÿ                secondC _secondC B    	ÿ   &    ÿÿÿÿÿÿÿÿminuteC _minuteC     
+                         ÿ                minuteC _minuteC B    	ÿ   '    ÿÿÿÿÿÿÿÿhourC _hourC     
+                         ÿ                hourC _hourC B    	ÿ   )    ÿÿÿÿÿÿÿÿdayC _dayC     
+                         ÿ                dayC _dayC B    	ÿ   *    ÿÿÿÿÿÿÿÿmonthC _monthC     
+                         ÿ                monthC _monthC B    	ÿ   +    ÿÿÿÿÿÿÿÿyearC _yearC     
+                         ÿ                yearC _yearC B   	ÿ   -    ÿÿÿÿÿÿÿÿtime _time     
+               
+          ÿ                time _time B   	ÿ   .    ÿÿÿÿÿÿÿÿdate _date     
+               
+          ÿ                date _date @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr1_Digita-Clock ?lstr1_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr2_Digita-Clock ?lstr2_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr3_Digita-Clock ?lstr3_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr4_Digita-Clock ?lstr4_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr5_Digita-Clock ?lstr5_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr6_Digita-Clock ?lstr6_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr7_Digita-Clock ?lstr7_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr8_Digita-Clock ?lstr8_Digita-Clock     
+                         ÿ                  @   	ÿ        ÿÿÿÿÿÿÿÿ?lstr9_Digita-Clock ?lstr9_Digita-Clock     
+                         ÿ                  `    ÿ       ÿÿÿÿÿÿÿÿ?ICS_set_timer ?ICS_set_timer                          `    ÿ       ÿÿÿÿÿÿÿÿ?ICS_mode ?ICS_mode                         `    ÿ       ÿÿÿÿÿÿÿÿ?ICS_set_count ?ICS_set_count                         `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS_time ?ICS_time     
+               
+          ÿ                time _time                         `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS_date ?ICS_date     
+               
+          ÿ                date _date                         `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr1_Digita-Clock ?ICS?lstr1_Digita-Clock     
+                         ÿ                                 	         `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr2_Digita-Clock ?ICS?lstr2_Digita-Clock     
+                         ÿ                                          `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr3_Digita-Clock ?ICS?lstr3_Digita-Clock     
+                         ÿ                                          `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr4_Digita-Clock ?ICS?lstr4_Digita-Clock     
+                         ÿ                                          `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr5_Digita-Clock ?ICS?lstr5_Digita-Clock     
+                         ÿ                                          `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr6_Digita-Clock ?ICS?lstr6_Digita-Clock     
+                         ÿ                                          `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr7_Digita-Clock ?ICS?lstr7_Digita-Clock     
+                         ÿ                                          `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr8_Digita-Clock ?ICS?lstr8_Digita-Clock     
+                         ÿ                                          `   	ÿ       ÿÿÿÿÿÿÿÿ?ICS?lstr9_Digita-Clock ?ICS?lstr9_Digita-Clock     
+                         ÿ                                             ÿ   0     ÿÿÿÿÿÿÿÿupdate_time _update_time        ÿÿÿÿ                 ÿ           ’   update_time _update_time    ÿ   J     ÿÿÿÿÿÿÿÿget_time _get_time        ÿÿÿÿ     0            ÿ        “     get_time _get_time    ÿ   c     ÿÿÿÿÿÿÿÿmain _main        ÿÿÿÿ    0            ÿ          ®  main _main                :   9                    :   ğÿÿÿ                 ;   İÿÿÿ                 ;   èÿÿÿ                 ;   çÿÿÿ                 ;   ãÿÿÿ                 ;   :          FSR FSR      RB0_bit RB0_bit      RB1_bit RB1_bit      RB2_bit RB2_bit      RB3_bit RB3_bit      RB4_bit RB4_bit      RB5_bit RB5_bit      TRISB0_bit TRISB0_bit      TRISB1_bit TRISB1_bit      TRISB2_bit TRISB2_bit      TRISB3_bit TRISB3_bit      TRISB4_bit TRISB4_bit      TRISB5_bit TRISB5_bit      R12 R12      R13 R13      IntToStr _IntToStr     input FARG_IntToStr_input     output FARG_IntToStr_output      TRISA TRISA      TRISB TRISB      TRISC TRISC      ADCON1 ADCON1      ADCON0 ADCON0      Lcd_Init _Lcd_Init      Lcd_Cmd _Lcd_Cmd      out_char FARG_Lcd_Cmd_out_char      RA0_bit RA0_bit      RA1_bit RA1_bit      Lcd_Out _Lcd_Out      row FARG_Lcd_Out_row      column FARG_Lcd_Out_column     text FARG_Lcd_Out_text      RA2_bit RA2_bit      RA3_bit RA3_bit      __CC2DW ___CC2DW      R0 R0      STATUS STATUS      INDF INDF      R1 R1      R2 R2      R3 R3      R4 R4      R5 R5      R6 R6      R7 R7      R8 R8      R9 R9      R10 R10      R11 R11      R14 R14      R15 R15      PCLATH PCLATH 	    __DoICPAddr ___DoICPAddr      ____DoIFC _____DoIFC      ____DoICP _____DoICP                00:  00:  00   00:  00:  00   EDIT      CLOC K    Time :    Date :                                       Üÿÿÿ              Ûÿÿÿ              ÿÿÿÿ              Úÿÿÿ              Ùÿÿÿ              Øÿÿÿ              ×ÿÿÿ              Öÿÿÿ              Õÿÿÿ              Ôÿÿÿ              Óÿÿÿ              Òÿÿÿ              Ñÿÿÿ              Ğÿÿÿ              Ïÿÿÿ              Îÿÿÿ              Íÿÿÿ              Ìÿÿÿ              Ëÿÿÿ       0     9           0     :                                                                                                                 0                           0                 3   ¡   3           ¡   3     Ûÿÿÿ   ¡   3                        4   
+   4     €       ¡   4              4     Üÿÿÿ    
+   4     €       ¡   4     Üÿÿÿ    ¡   4     Ûÿÿÿ      4     ;       
+   4     <       ¡   4                4     ;       ¡   4     Ûÿÿÿ       4                           5   ¡   5           ¡   5     Ûÿÿÿ   ¡   5                        6      6               6                         7       7                           8   
+   8     €       ¡   8              8     Üÿÿÿ    
+   8     €       ¡   8     Üÿÿÿ    ¡   8     Ûÿÿÿ      8     <       
+   8     <       ¡   8                8     <       ¡   8     Ûÿÿÿ       8                          9   ¡   9           ¡   9     Ûÿÿÿ   ¡   9                        :      :               :                         ;       ;                          <   
+   <     €       ¡   <              <     Üÿÿÿ    
+   <     €       ¡   <     Üÿÿÿ    ¡   <     Ûÿÿÿ      <     =       
+   <            ¡   <                <     =       ¡   <     Ûÿÿÿ       <                          =   ¡   =           ¡   =     Ûÿÿÿ   ¡   =                        >      >               >                         ?       ?                          @   
+   @     €       ¡   @              @     Üÿÿÿ    
+   @     €       ¡   @     Üÿÿÿ    ¡   @     Ûÿÿÿ      @     >       
+   @            ¡   @                @     >       ¡   @     Ûÿÿÿ       @                          A   ¡   A           ¡   A     Ûÿÿÿ   ¡   A                        B      B               B                         C       C                          D   
+   D     €       ¡   D              D     Üÿÿÿ    
+   D     €       ¡   D     Üÿÿÿ    ¡   D     Ûÿÿÿ      D     ?       
+   D            ¡   D                D     ?       ¡   D     Ûÿÿÿ       D                          E   ¡   E           ¡   E     Ûÿÿÿ   ¡   E                        F      F               F                         G       G                          H       H     9           H                      9          J     :           J     A                 òÿÿÿ              ñÿÿÿ                                                                                                                                                                        !                                                                               J                           J                 K      K     9                                                      L   J   L     A       A   L     òÿÿÿ    J   L     î       A   L     ñÿÿÿ        L            ¡  L     ñÿÿÿ   H  L            ¡  L     òÿÿÿ   H  L            D  L                           N   
+¡   N               N     ïÿÿÿ    
+¡   N              N    ïÿÿÿ       N               N     îÿÿÿ       N     ğÿÿÿ                                                 O   
+¡   O              O                           P   
+¡   P              P                          Q   
+¡   Q               Q     ïÿÿÿ    
+¡   Q              Q    ïÿÿÿ       Q               Q     îÿÿÿ       Q     ğÿÿÿ                                                 R   
+¡   R              R                          S   
+¡   S              S                          T   
+¡   T               T     ïÿÿÿ    
+¡   T              T    ïÿÿÿ       T               T     îÿÿÿ       T     ğÿÿÿ                                                 U   
+¡   U              U                          V   
+¡   V              V 	                         X   
+¡   X               X     ïÿÿÿ    
+¡   X              X    ïÿÿÿ       X               X     îÿÿÿ       X     ğÿÿÿ                                                 Y   
+¡   Y              Y     !                     Z   
+¡   Z              Z    !                     [   
+¡   [               [     ïÿÿÿ    
+¡   [              [    ïÿÿÿ       [               [     îÿÿÿ       [     ğÿÿÿ                                                 \   
+¡   \              \    !                     ]   
+¡   ]              ]    !                     ^   
+¡   ^               ^     ïÿÿÿ    
+¡   ^              ^    ïÿÿÿ       ^               ^     îÿÿÿ       ^     ğÿÿÿ                                                 _   
+¡   _              _    !                     `   
+¡   `              ` 	   !                     a       a     @           a                      :          c     ;           c     C                 íÿÿÿ              ìÿÿÿ              ëÿÿÿ              êÿÿÿ              éÿÿÿ              åÿÿÿ                                                                 äÿÿÿ              "                 #                                   !                 òÿÿÿ              ñÿÿÿ              $                 %                 ßÿÿÿ                               Şÿÿÿ              &                                  '                                  (                                  )                                  *           c                           c                 d   
+   d               d     íÿÿÿ                  e      e     ìÿÿÿ                  f   
+   f     ÿ          f     ëÿÿÿ                  g   
+   g               g     êÿÿÿ                  h      h     éÿÿÿ                  j      j     èÿÿÿ                                                   k   
+   k               k     æÿÿÿ       k     çÿÿÿ                                                   l   
+   l               l     æÿÿÿ       l     çÿÿÿ                                                   n       n                          o   Á   o     åÿÿÿåÿÿÿ   o     
+       Á   o              o     
+           o     8                     p   Á   p                         q   
+   q            ¡   q            ¡   q     Ûÿÿÿ       q            ¡   q              q                q                          r   
+   r               r                r                          s   
+   s               s     æÿÿÿ       s     çÿÿÿ                                                   t   
+   t               t                          u       u     
+                     v   Á   v     åÿÿÿåÿÿÿ   v            Á   v              v                v     7       Á   v               v                          w   Á   w     äÿÿÿäÿÿÿ   w                          x      x                          y      y                          z       z                          {   
+¡   {            ¡   {     Ûÿÿÿ      {                          |   
+   |               |     âÿÿÿ    
+   |               |     áÿÿÿ       |     "          |     àÿÿÿ       |     ãÿÿÿ                                                  }   
+   }               }     âÿÿÿ    
+   }               }     áÿÿÿ       }     #          }     àÿÿÿ       }     ãÿÿÿ                                                  ~      ~     :                                                         
+                       âÿÿÿ    
+                       áÿÿÿ                            àÿÿÿ            ãÿÿÿ                                                  €   
+   €               €     âÿÿÿ    
+   €               €     áÿÿÿ       €     !          €     àÿÿÿ       €     ãÿÿÿ                                                     J        ‚       A        òÿÿÿ    J        İ       A        ñÿÿÿ                    ¡       ñÿÿÿ   H              ¡       òÿÿÿ   H              D               D                             ‚      ‚                ‚                          „      „     :                                                      …   
+   …               …     âÿÿÿ    
+   …               …     áÿÿÿ       …     $          …     àÿÿÿ       …     ãÿÿÿ                                                  †   
+   †               †     âÿÿÿ    
+   †               †     áÿÿÿ       †     %          †     àÿÿÿ       †     ãÿÿÿ                                                  ‡   
+   ‡               ‡     âÿÿÿ    
+   ‡               ‡     áÿÿÿ       ‡                ‡     àÿÿÿ       ‡     ãÿÿÿ                                                  ˆ   
+   ˆ               ˆ     âÿÿÿ    
+   ˆ               ˆ     áÿÿÿ       ˆ     !          ˆ     àÿÿÿ       ˆ     ãÿÿÿ                                                  ‰   J   ‰     ‚       A   ‰     òÿÿÿ    J   ‰     İ       A   ‰     ñÿÿÿ        ‰            ¡  ‰     ñÿÿÿ   H  ‰            ¡  ‰     òÿÿÿ   H  ‰            D  ‰             D  ‰                           Š       Š                          ‹   
+¡   ‹            ¡   ‹     Ûÿÿÿ      ‹                          Œ      Œ                                                              Á        ßÿÿÿßÿÿÿ               ¡              ¡        Ûÿÿÿ   ¡                                              Á        ŞÿÿÿŞÿÿÿ               
+               ¡              ¡        Ûÿÿÿ    ¡                                              
+        €       ¡                      Üÿÿÿ    
+        €       ¡        Üÿÿÿ    ¡        Ûÿÿÿ           D       
+               ¡                        D       ¡        Ûÿÿÿ                                 ‘      ‘               ‘               ‘                          ’   
+   ’               ’     âÿÿÿ    
+   ’               ’     áÿÿÿ       ’     &          ’     àÿÿÿ       ’     ãÿÿÿ                                                  “   J   “     ‚       A   “     òÿÿÿ    J   “     İ       A   “     ñÿÿÿ        “            ¡  “     ñÿÿÿ   H  “            ¡  “     òÿÿÿ   H  “            D  “             D  “                           ”      ”                          •       •                          –   Á   –     ßÿÿÿßÿÿÿ   –            ¡   –           ¡   –     Ûÿÿÿ   ¡   –              –                          —   Á   —     ŞÿÿÿŞÿÿÿ   —            
+   —            ¡   —           ¡   —     Ûÿÿÿ    ¡   —              —                          ˜   
+   ˜     €       ¡   ˜              ˜     Üÿÿÿ    
+   ˜     €       ¡   ˜     Üÿÿÿ    ¡   ˜     Ûÿÿÿ      ˜     E       
+   ˜     <       ¡   ˜                ˜     E       ¡   ˜     Ûÿÿÿ       ˜                           ™      ™               ™               ™                           š   
+   š     €       ¡   š              š     Üÿÿÿ    
+   š     €       ¡   š     Üÿÿÿ    ¡   š     Ûÿÿÿ      š     F       
+   š             ¡   š                š     F       ¡   š     Ûÿÿÿ       š     !                     ›   
+   ›     ;          ›            
+   ›                ›               ›     !                     œ   
+   œ               œ     âÿÿÿ    
+   œ               œ     áÿÿÿ       œ     '          œ     àÿÿÿ       œ     ãÿÿÿ                                                     J        ‚       A        òÿÿÿ    J        İ       A        ñÿÿÿ             "       ¡       ñÿÿÿ   H       "       ¡       òÿÿÿ   H       "       D               D                                                             Ÿ       Ÿ     #                         J         ‚       A         òÿÿÿ    J         İ       A         ñÿÿÿ              $       ¡        ñÿÿÿ   H        $       ¡        òÿÿÿ   H        $       D                D                              ¡      ¡                          ¢       ¢     %                     £   Á   £     ßÿÿÿßÿÿÿ   £     &       ¡   £           ¡   £     Ûÿÿÿ   ¡   £              £     &                     ¤   Á   ¤     ŞÿÿÿŞÿÿÿ   ¤     '       
+   ¤            ¡   ¤           ¡   ¤     Ûÿÿÿ    ¡   ¤              ¤     '                     ¥   
+   ¥     €       ¡   ¥              ¥     Üÿÿÿ    
+   ¥     €       ¡   ¥     Üÿÿÿ    ¡   ¥     Ûÿÿÿ      ¥     G       
+   ¥             ¡   ¥                ¥     G       ¡   ¥     Ûÿÿÿ       ¥     (                     ¦   
+   ¦               ¦            
+   ¦                ¦               ¦     (                     §   
+   §     €       ¡   §              §     Üÿÿÿ    
+   §     €       ¡   §     Üÿÿÿ    ¡   §     Ûÿÿÿ      §     H       
+   §             ¡   §                §     H       ¡   §     Ûÿÿÿ       §     )                     ¨   
+   ¨               ¨            
+   ¨                ¨               ¨     )                     ©   
+   ©               ©     âÿÿÿ    
+   ©               ©     áÿÿÿ       ©     (          ©     àÿÿÿ       ©     ãÿÿÿ                                                  ª   J   ª     ‚       A   ª     òÿÿÿ    J   ª     İ       A   ª     ñÿÿÿ        ª     *       ¡  ª     ñÿÿÿ   H  ª     *       ¡  ª     òÿÿÿ   H  ª     *       D  ª             D  ª                           «      «                          ¬       ¬     +                     ­   Á   ­     ßÿÿÿßÿÿÿ   ­     ,       ¡   ­           ¡   ­     Ûÿÿÿ   ¡   ­              ­     ,                     ®   Á   ®     ŞÿÿÿŞÿÿÿ   ®     -       
+   ®            ¡   ®           ¡   ®     Ûÿÿÿ    ¡   ®              ®     -                     ¯   
+   ¯     €       ¡   ¯              ¯     Üÿÿÿ    
+   ¯     €       ¡   ¯     Üÿÿÿ    ¡   ¯     Ûÿÿÿ      ¯     I       
+   ¯            ¡   ¯                ¯     I       ¡   ¯     Ûÿÿÿ       ¯     .                     °   
+   °               °            
+   °                °               °     .                     ±   
+   ±     €       ¡   ±              ±     Üÿÿÿ    
+   ±     €       ¡   ±     Üÿÿÿ    ¡   ±     Ûÿÿÿ      ±     J       
+   ±             ¡   ±                ±     J       ¡   ±     Ûÿÿÿ       ±     /                     ²   
+   ²               ²            
+   ²                ²               ²     /                     ³   
+   ³               ³     âÿÿÿ    
+   ³               ³     áÿÿÿ       ³     )          ³     àÿÿÿ       ³     ãÿÿÿ                                                  ´   J   ´     ‚       A   ´     òÿÿÿ    J   ´     İ       A   ´     ñÿÿÿ        ´     0       ¡  ´     ñÿÿÿ   H  ´     0       ¡  ´     òÿÿÿ   H  ´     0       D  ´             D  ´                           µ      µ                          ¶       ¶     1                     ·   Á   ·     ßÿÿÿßÿÿÿ   ·     2       ¡   ·           ¡   ·     Ûÿÿÿ   ¡   ·              ·     2                     ¸   Á   ¸     ŞÿÿÿŞÿÿÿ   ¸     3       
+   ¸            ¡   ¸           ¡   ¸     Ûÿÿÿ    ¡   ¸              ¸     3                     ¹   
+   ¹               ¹     Üÿÿÿ    
+   ¹     €       ¡   ¹           ¡   ¹     Üÿÿÿ    ¡   ¹     Ûÿÿÿ      ¹     K       
+¡   ¹            !
+   ¹     ÿ           ¹     K       ¡   ¹     Ûÿÿÿ       ¹     4                     º   
+   º     c          º            
+   º                º               º     4                     »   
+   »     €          »     Üÿÿÿ    
+   »     €       ¡   »           ¡   »     Üÿÿÿ    ¡   »     Ûÿÿÿ      »     L       
+¡   »            !
+   »     2           »     L       ¡   »     Ûÿÿÿ       »     5                     ¼      ¼               ¼               ¼     5                     ½   
+   ½               ½     âÿÿÿ    
+   ½               ½     áÿÿÿ       ½     *          ½     àÿÿÿ       ½     ãÿÿÿ                                                  ¾   J   ¾     ‚       A   ¾     òÿÿÿ    J   ¾     İ       A   ¾     ñÿÿÿ        ¾     6       ¡  ¾     ñÿÿÿ   H  ¾     6       ¡  ¾     òÿÿÿ   H  ¾     6       D  ¾             D  ¾                           ¿      ¿                          Â       Â            
+¡   Â            "
+   Â            ¡   Â     Ûÿÿÿ      Â            
+¡   Â            "
+   Â            ¡   Â     Ûÿÿÿ      Â            
+¡   Â            "
+   Â            ¡   Â     Ûÿÿÿ      Â     #       
+¡   Â            "
+   Â            ¡   Â     Ûÿÿÿ      Â     %       
+¡   Â            "
+   Â            ¡   Â     Ûÿÿÿ      Â     +       
+¡   Â            "
+   Â            ¡   Â     Ûÿÿÿ      Â     1           Â                          Ã       Ã                          Ä      Ä                          Å       Å     B          Å                      ;       L_update_time0 L_update_time1 L_update_time2 L_update_time3 L_update_time4 L_get_time5 L_main6 L_main7 L_main8 L_main9 L_main10 L_main11 L_main12 L_main13 L_main14 L_main15 L_main16 L_main17 L_main18 L_main19 L_main20 L_main21 L_main22 L_main23 L_main24 L_main25 L_main26 L_main27 L_main28 L_main29 L_main30 L_main31 L_main32 L_main33 L_main34 L_main35 L_main36 L_main37 L_main38 L_main39 L_main40 L_main41 L_main42 L_main43 L_main44 L_main45 L_main46 L_main47 L_main48 L_main49 L_main50 L_main51 L_main52 L_main53 L_main54 L__main55 L__main56 L_end_update_time _update_time L__update_time58 L__update_time59 L__update_time60 L__update_time61 L__update_time62 L_end_get_time _get_time L_end_main _main L__main65 L__main66 L__main67 L__main68 L__main69 L__main70 L__main71 L__main72 L__main73  ÿÿÿÿ
