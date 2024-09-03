@@ -2,7 +2,7 @@
 An alternative to the conventional analog clock is a digital clock. On a watch, phone, or alarm clock, this kind of clock uses digits to display the time in a digital format. Both a 12- and 24-hour format is possible.
 
 <p align="left">
-In this project, I attempt to put into practice a functional digital clock that shows the time in the format "hh:mm:ss" and the date in the format "yy:mm:dd." To implement the time, we employ the interrupt approach without using the Real Time Clock Module. I'll also aim to include four buttons that will let you change the number of hours and minutes.
+In this project, I attempt to put into practice a functional digital clock that shows the time in the format "hh:mm:ss" and the date in the format "yy:mm:dd." To implement the time, we employ the time delay approach without using the Real Time Clock Module. I'll also aim to include four buttons that will let you change the number of hours and minutes.
 </p>
 
 
